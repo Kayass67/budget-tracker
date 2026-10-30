@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-slate-800 antialiased selection:bg-primary-100 selection:text-primary-800;
+    min-height: 100vh;
+  }
+
+  /* Accessible keyboard navigation focus indicator */
+  :focus-visible {
+    outline: 2px solid #7c6fe0;
+    outline-offset: 2px;
+  }
+}
+
+/* Custom glassy card style helper */
+.card-glass {
+  background-color: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(124, 111, 224, 0.14);
+  border-radius: 1rem;
+  box-shadow:
+    0 8px 24px -4px rgba(124, 111, 224, 0.1),
+    0 2px 8px -2px rgba(0, 0, 0, 0.04);
+}
